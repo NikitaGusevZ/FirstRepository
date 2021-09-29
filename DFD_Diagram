@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-29T13:40:30.888Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="aaoD3m9P1pw-uT6BwuKl" version="15.2.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-29T13:45:47.075Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="CrByaBZbaNtbQ9UIWijW" version="15.2.9" type="github">
   <diagram id="Z2ZnFh1gch4KIhLc6XAk" name="Page-1">
     <mxGraphModel dx="1038" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -142,6 +142,69 @@
         </mxCell>
         <mxCell id="kW303fziXQ9hrQACOVDu-51" value="Получение средств" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="430" y="445" width="96.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-52" value="Разработчик" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="990" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-58" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="kW303fziXQ9hrQACOVDu-53" target="kW303fziXQ9hrQACOVDu-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-53" value="Выбор дистрибьюетра" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1000" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-59" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="kW303fziXQ9hrQACOVDu-54" target="kW303fziXQ9hrQACOVDu-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-54" value="Просмотр результата продаж" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="314" y="1000" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-55" value="Размещение ПО" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1000" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-57" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="kW303fziXQ9hrQACOVDu-52" target="kW303fziXQ9hrQACOVDu-53">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="1020" as="sourcePoint" />
+            <mxPoint x="180" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-62" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="kW303fziXQ9hrQACOVDu-61" target="kW303fziXQ9hrQACOVDu-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-61" value="ПО" style="html=1;dashed=0;whitespace=wrap;shape=partialRectangle;right=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1080" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-63" value="Дистрибьютер" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="840" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-64" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="kW303fziXQ9hrQACOVDu-47" target="kW303fziXQ9hrQACOVDu-29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="485" as="sourcePoint" />
+            <mxPoint x="540" y="605" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-65" value="Размещение ПО" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="410" width="96.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-66" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="kW303fziXQ9hrQACOVDu-65" target="kW303fziXQ9hrQACOVDu-47">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="536.5" y="470" as="sourcePoint" />
+            <mxPoint x="660" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-67" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="kW303fziXQ9hrQACOVDu-63" target="kW303fziXQ9hrQACOVDu-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="940" as="sourcePoint" />
+            <mxPoint x="280" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-68" value="" style="endArrow=none;html=1;" edge="1" parent="1" source="kW303fziXQ9hrQACOVDu-63" target="kW303fziXQ9hrQACOVDu-69">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="900" as="sourcePoint" />
+            <mxPoint x="270" y="868" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kW303fziXQ9hrQACOVDu-69" value="Предоставление данных о результате продаж" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="850" width="160" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
