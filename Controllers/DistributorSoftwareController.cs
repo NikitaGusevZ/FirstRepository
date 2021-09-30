@@ -12,29 +12,25 @@ namespace FirstRepository.Controllers
     public class CustomerController : ControllerBase
     {
 
-        [HttpGet]
-        [Route("/customer/SearchPO")]
+        [HttpGet("SearchPO")]
         public string SearchPO(string str)
         {
             return "Метод поиска ПО";
         }
 
-        [HttpGet]
-        [Route("/customer/BuyPO")]
+        [HttpGet("BuyPO")]
         public string BuyPO(string str)
         {
             return "Метод покупки ПО";
         }
 
-        [HttpGet]
-        [Route("/customer/DownloadPO")]
+        [HttpGet("DownloadPO")]
         public string DownloadPO(string str)
         {
             return "Метод скачивания ПО";
         }
 
-        [HttpGet]
-        [Route("/customer/GradePO")]
+        [HttpGet("GradePO")]
         public string GradePO(string str)
         {
             return "Метод оценки ПО";
@@ -46,29 +42,25 @@ namespace FirstRepository.Controllers
     [Route("/distributor")]
     public class DistributorController : ControllerBase
     {
-        [HttpGet]
-        [Route("/distributor/Confirmation")]
+        [HttpGet("Confirmation")]
         public string Confirmation(string str)
         {
             return "Метод подтверждения размещения ПО";
         }
 
-        [HttpGet]
-        [Route("/distributor/Price_Setting")]
+        [HttpGet("Price_Setting")]
         public string Price_Setting(string str)
         {
             return "Метод установки цен и акций ПО";
         }
 
-        [HttpGet]
-        [Route("/distributor/Transfer")]
+        [HttpGet("Transfer")]
         public string Transfer(string str)
         {
             return "Метод перечисления средств разработчику";
         }
 
-        [HttpGet]
-        [Route("/distributor/ViewSales")]
+        [HttpGet("ViewSales")]
         public string ViewSales(string str)
         {
             return "Метод просмотра продаж";
@@ -76,25 +68,23 @@ namespace FirstRepository.Controllers
     }
 
     [ApiController]
-    [Route("/Developer")]
+    [Route("/developer")]
     public class DeveloperController : ControllerBase
     {
-        [HttpGet]
-        [Route("/distributor/ChoiseDistributor")]
+
+        [HttpGet("ChoiseDistributor")]
         public string ChoiseDistributor(string str)
         {
             return "Метод выбора дистрибьютера";
         }
 
-        [HttpGet]
-        [Route("/distributor/ViewSalesResult")]
+        [HttpGet("ViewSalesResult")]
         public string ViewSalesResult(string str)
         {
             return "Метод просмотра результата продаж";
         }
 
-        [HttpGet]
-        [Route("/distributor/PlacementPO")]
+        [HttpGet("PlacementPO")]
         public string PlacementPO(string str)
         {
             return "Метод размещение ПО";
