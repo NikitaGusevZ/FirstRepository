@@ -15,27 +15,27 @@ namespace FirstRepository.Controllers
         [HttpGet("SearchPO")]
         public string SearchPO(string str)
         {
-            return "Метод поиска ПО";
+            return str; //"Метод поиска ПО";
         }
 
         [HttpGet("BuyPO")]
         public string BuyPO(string str)
         {
-            return "Метод покупки ПО";
+            return str;// "Метод покупки ПО";
         }
 
 
         [HttpGet("DownloadPO")]
         public string DownloadPO(string str)
         {
-            return "Метод скачивания ПО";
+            return str;// "Метод скачивания ПО";
         }
 
         
         [HttpGet("GradePO")]
         public string GradePO(string str)
         {
-            return "Метод оценки ПО";
+            return str;//"Метод оценки ПО";
         }
 
     }
@@ -48,25 +48,25 @@ namespace FirstRepository.Controllers
         [HttpGet("Confirmation")]
         public string Confirmation(string str)
         {
-            return "Метод подтверждения размещения ПО";
+            return str; // "Метод подтверждения размещения ПО";
         }
 
         [HttpGet("Price_Setting")]
         public string Price_Setting(string str)
         {
-            return "Метод установки цен и акций ПО";
+            return str;// "Метод установки цен и акций ПО";
         }
 
         [HttpGet("Transfer")]
         public string Transfer(string str)
         {
-            return "Метод перечисления средств разработчику";
+            return str;// "Метод перечисления средств разработчику";
         }
 
         [HttpGet("ViewSales")]
         public string ViewSales(string str)
         {
-            return "Метод просмотра продаж";
+            return str;// "Метод просмотра продаж";
         }
     }
 
@@ -78,19 +78,19 @@ namespace FirstRepository.Controllers
         [HttpGet("ChoiseDistributor")]
         public string ChoiseDistributor(string str)
         {
-            return " Метод выбора дистрибьютера";
+            return str;// " Метод выбора дистрибьютера";
         }
 
         [HttpGet("ViewSalesResult")]
         public string ViewSalesResult(string str)
         {
-            return "Метод просмотра результата продаж";
+            return str;// "Метод просмотра результата продаж";
         }
 
         [HttpGet("PlacementPO")]
         public string PlacementPO(string str)
         {
-            return "Метод размещение ПО";
+            return str;// "Метод размещение ПО";
         }
     }
 }
