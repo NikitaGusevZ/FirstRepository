@@ -8,32 +8,96 @@ using Microsoft.Extensions.Logging;
 namespace FirstRepository.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    [Route("/customer")]
+    public class CustomerController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
 
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        [HttpGet]
+        [Route("/customer/SearchPO")]
+        public string SearchPO(string str)
         {
-            _logger = logger;
+            return "Метод поиска ПО";
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        [Route("/customer/BuyPO")]
+        public string BuyPO(string str)
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            return "Метод покупки ПО";
+        }
+
+        [HttpGet]
+        [Route("/customer/DownloadPO")]
+        public string DownloadPO(string str)
+        {
+            return "Метод скачивания ПО";
+        }
+
+        [HttpGet]
+        [Route("/customer/GradePO")]
+        public string GradePO(string str)
+        {
+            return "Метод оценки ПО";
+        }
+
+    }
+
+    [ApiController]
+    [Route("/distributor")]
+    public class DistributorController : ControllerBase
+    {
+        [HttpGet]
+        [Route("/distributor/Confirmation")]
+        public string Confirmation(string str)
+        {
+            return "Метод подтверждения размещения ПО";
+        }
+
+        [HttpGet]
+        [Route("/distributor/Price_Setting")]
+        public string Price_Setting(string str)
+        {
+            return "Метод установки цен и акций ПО";
+        }
+
+        [HttpGet]
+        [Route("/distributor/Transfer")]
+        public string Transfer(string str)
+        {
+            return "Метод перечисления средств разработчику";
+        }
+
+        [HttpGet]
+        [Route("/distributor/ViewSales")]
+        public string ViewSales(string str)
+        {
+            return "Метод просмотра продаж";
+        }
+    }
+
+    [ApiController]
+    [Route("/Developer")]
+    public class DeveloperController : ControllerBase
+    {
+        [HttpGet]
+        [Route("/distributor/ChoiseDistributor")]
+        public string ChoiseDistributor(string str)
+        {
+            return "Метод выбора дистрибьютера";
+        }
+
+        [HttpGet]
+        [Route("/distributor/ViewSalesResult")]
+        public string ViewSalesResult(string str)
+        {
+            return "Метод просмотра результата продаж";
+        }
+
+        [HttpGet]
+        [Route("/distributor/PlacementPO")]
+        public string PlacementPO(string str)
+        {
+            return "Метод размещение ПО";
         }
     }
 }
