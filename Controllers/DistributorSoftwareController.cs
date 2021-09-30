@@ -11,30 +11,27 @@ namespace FirstRepository.Controllers
     [Route("/customer")]
     public class CustomerController : ControllerBase
     {
-
-        [HttpGet]
-        [Route("/customer/SearchPO")]
+        [HttpGet("SearchPO")]
         public string SearchPO(string str)
         {
             return "Метод поиска ПО";
         }
 
-        [HttpGet]
-        [Route("/customer/BuyPO")]
+        [HttpGet("BuyPO")]
         public string BuyPO(string str)
         {
             return "Метод покупки ПО";
         }
 
         [HttpGet]
-        [Route("/customer/DownloadPO")]
+        [Route("DownloadPO")]
         public string DownloadPO(string str)
         {
             return "Метод скачивания ПО";
         }
 
         [HttpGet]
-        [Route("/customer/GradePO")]
+        [Route("GradePO")]
         public string GradePO(string str)
         {
             return "Метод оценки ПО";
@@ -47,7 +44,7 @@ namespace FirstRepository.Controllers
     public class DistributorController : ControllerBase
     {
         [HttpGet]
-        [Route("/distributor/Confirmation")]
+        [Route("Confirmation")]
         public string Confirmation(string str)
         {
             return "Метод подтверждения размещения ПО";
