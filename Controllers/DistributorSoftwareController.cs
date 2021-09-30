@@ -24,11 +24,13 @@ namespace FirstRepository.Controllers
             return "Метод покупки ПО";
         }
 
+
         [HttpGet("DownloadPO")]
         public string DownloadPO(string str)
         {
             return "Метод скачивания ПО";
         }
+
 
         [HttpGet("GradePO")]
         public string GradePO(string str)
@@ -42,6 +44,7 @@ namespace FirstRepository.Controllers
     [Route("/distributor")]
     public class DistributorController : ControllerBase
     {
+
         [HttpGet("Confirmation")]
         public string Confirmation(string str)
         {
