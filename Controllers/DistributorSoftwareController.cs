@@ -31,7 +31,7 @@ namespace FirstRepository.Controllers
             return "Метод скачивания ПО";
         }
 
-
+        
         [HttpGet("GradePO")]
         public string GradePO(string str)
         {
@@ -78,7 +78,7 @@ namespace FirstRepository.Controllers
         [HttpGet("ChoiseDistributor")]
         public string ChoiseDistributor(string str)
         {
-            return "Метод выбора дистрибьютера";
+            return " Метод выбора дистрибьютера";
         }
 
         [HttpGet("ViewSalesResult")]
