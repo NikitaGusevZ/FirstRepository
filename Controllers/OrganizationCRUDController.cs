@@ -8,8 +8,8 @@ using Microsoft.Extensions.Logging;
 namespace FirstRepository.Controllers
 {
     [ApiController]
-    [Route("/organizationCRUD")]
-    public class OrganizationCRUDController : ControllerBase
+    [Route("/organization")]
+    public class OrganizationController : ControllerBase
     {
 
         [HttpPut("Create")]

@@ -9,7 +9,7 @@ namespace FirstRepository.Controllers
 {
     [ApiController]
     [Route("/softwaretype")]
-    public class SoftwareTypeControllerCRUD : ControllerBase
+    public class SoftwareTypeController : ControllerBase
     {
 
         [HttpPut("Create")]

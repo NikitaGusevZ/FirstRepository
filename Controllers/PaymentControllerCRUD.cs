@@ -9,7 +9,7 @@ namespace FirstRepository.Controllers
 {
     [ApiController]
     [Route("/payment")]
-    public class PaymentControllerCRUD : ControllerBase
+    public class PaymentController : ControllerBase
     {
 
         [HttpPut("Create")]
