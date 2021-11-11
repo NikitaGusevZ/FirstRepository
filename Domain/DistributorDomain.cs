@@ -8,6 +8,6 @@ namespace FirstRepository.Domain
     public class DistributorDomain
     {
         public int Id { get; set; }
-        public int OrganizationId { get; set; }
+        public OrganizationDomain Organization { get; set; }
     }
 }
