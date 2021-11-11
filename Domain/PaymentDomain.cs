@@ -9,6 +9,6 @@ namespace FirstRepository.Domain
     {
         public int CusotmerId { get; set; }
         public int DistributorId { get; set; }
-        public string PurchaseDate { get; set; }
+        public DateTime PurchaseDate { get; set; }
     }
 }
