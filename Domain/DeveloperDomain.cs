@@ -7,6 +7,7 @@ namespace FirstRepository.Domain
 {
     public class DeveloperDomain
     {
+        public int Id { get; set; }
         public OrganizationDomain Organization { get; set; }
     }
 }

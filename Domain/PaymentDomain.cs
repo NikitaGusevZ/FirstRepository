@@ -8,7 +8,6 @@ namespace FirstRepository.Domain
     public class PaymentDomain
     {
         public int CusotmerId { get; set; }
-        public int SoftwareId { get; set; }
         public int DistributorId { get; set; }
         public string PurchaseDate { get; set; }
     }
