@@ -7,6 +7,7 @@ namespace FirstRepository.Domain
 {
     public class SoftwareDomain
     {
+        public int softwareId { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
         public int SoftwareTypeId { get; set; }

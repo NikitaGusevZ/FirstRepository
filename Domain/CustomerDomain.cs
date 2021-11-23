@@ -7,6 +7,8 @@ namespace FirstRepository.Domain
 {
     public class CustomerDomain
     {
+        public int customerId { get; set; }
+
         public string FirstName { get; set; }
 
         public string SecondtName { get; set; }
