@@ -7,6 +7,7 @@ namespace FirstRepository.Domain
 {
     public class SoftwareTypeDomain
     {
+        public int softtypeId { get; set; }
         public string Name { get; set; }
     }
 }
