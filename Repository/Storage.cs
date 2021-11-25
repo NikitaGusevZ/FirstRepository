@@ -1,16 +1,15 @@
-﻿
-namespace FirstRepository.Repository
+﻿namespace FirstRepository.Repository
 {
     public class Storage
     {
-        public static Connection_Payment_SoftwareStorage Connection_Payment_SoftwareStorage { get; } = new Connection_Payment_SoftwareStorage();
-        public static CustomerStorage CustomerStorage { get; } = new CustomerStorage();
-        public static DeveloperStorage DeveloperStorage { get; } = new DeveloperStorage();
-        public static DistributorStorage DistributorStorage { get; } = new DistributorStorage();
-        public static OrganizationStorage OrganizationStorage { get; } = new OrganizationStorage();
-        public static PaymentReportStorage PaymentReportStorage { get; } = new PaymentReportStorage();
-        public static PaymentStorage PaymentStorage { get; } = new PaymentStorage();
-        public static SoftwareStorage SoftwareStorage { get; } = new SoftwareStorage();
-        public static SoftwareTypeStorage SoftwareTypeStorage { get; }  = new SoftwareTypeStorage();
+        public static readonly ConnectionPaymentSoftwareStorage ConnectionPaymentSoftwareStorage = new();
+        public static readonly CustomerStorage CustomerStorage = new();
+        public static readonly DeveloperStorage DeveloperStorage = new();
+        public static readonly DistributorStorage DistributorStorage = new();
+        public static readonly OrganizationStorage OrganizationStorage = new();
+        public static readonly PaymentReportStorage PaymentReportStorage = new();
+        public static readonly PaymentStorage PaymentStorage = new();
+        public static readonly SoftwareStorage SoftwareStorage = new();
+        public static readonly SoftwareTypeStorage SoftwareTypeStorage = new();
     }
 }

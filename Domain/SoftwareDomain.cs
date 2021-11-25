@@ -9,7 +9,7 @@ namespace FirstRepository.Domain
     {
         public int softwareId { get; set; }
         public string Name { get; set; }
-        public int Price { get; set; }
+        public decimal Price { get; set; }
         public int SoftwareTypeId { get; set; }
         public int Rating{ get; set; }
         public int DeveloperId { get; set; }

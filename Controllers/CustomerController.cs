@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FirstRepository.Domain;
+using FirstRepository.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -38,25 +40,26 @@ namespace FirstRepository.Controllers
             return str;//"Метод оценки ПО";
         }
 
-        [HttpPut("Create")]
-        public string Create(string str)
+        [HttpPut]
+        public Customer Create(Customer customer)
         {
-            return str;
+            Storage.CustomerStorage.Create(customer);
+            return Storage.CustomerStorage.Read(customer.Id);
         }
 
-        [HttpGet("Read")]
+        [HttpGet]
         public string Read(string str)
         {
             return str;
         }
 
-        [HttpPatch("Update")]
+        [HttpPatch]
         public string Update(string str)
         {
             return str;
         }
 
-        [HttpDelete("Delete")]
+        [HttpDelete]
         public string Delete(string str)
         {
             return str;

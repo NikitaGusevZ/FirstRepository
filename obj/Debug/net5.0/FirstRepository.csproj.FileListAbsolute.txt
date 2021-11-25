@@ -27,3 +27,32 @@ C:\Users\Nikita Gusev\Documents\GitHub\FirstRepository\obj\Debug\net5.0\FirstRep
 C:\Users\Nikita Gusev\Documents\GitHub\FirstRepository\obj\Debug\net5.0\ref\FirstRepository.dll
 C:\Users\Nikita Gusev\Documents\GitHub\FirstRepository\obj\Debug\net5.0\FirstRepository.pdb
 C:\Users\Nikita Gusev\Documents\GitHub\FirstRepository\obj\Debug\net5.0\FirstRepository.genruntimeconfig.cache
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\appsettings.Development.json
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\appsettings.json
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\FirstRepository.exe
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\FirstRepository.deps.json
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\FirstRepository.runtimeconfig.json
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\FirstRepository.runtimeconfig.dev.json
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\FirstRepository.dll
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\ref\FirstRepository.dll
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\FirstRepository.pdb
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\rsreu\03_practice\0315\Gusev\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\FirstRepository.csprojAssemblyReference.cache
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\FirstRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\FirstRepository.AssemblyInfoInputs.cache
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\FirstRepository.AssemblyInfo.cs
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\FirstRepository.csproj.CoreCompileInputs.cache
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\FirstRepository.MvcApplicationPartsAssemblyInfo.cs
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\FirstRepository.MvcApplicationPartsAssemblyInfo.cache
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\staticwebassets\FirstRepository.StaticWebAssets.Manifest.cache
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\staticwebassets\FirstRepository.StaticWebAssets.xml
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\scopedcss\bundle\FirstRepository.styles.css
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\FirstRepository.RazorTargetAssemblyInfo.cache
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\FirstRepository.csproj.CopyComplete
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\FirstRepository.dll
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\ref\FirstRepository.dll
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\FirstRepository.pdb
+D:\rsreu\03_practice\0315\Gusev\obj\Debug\net5.0\FirstRepository.genruntimeconfig.cache
