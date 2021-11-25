@@ -1,18 +1,21 @@
 ﻿using FirstRepository.Domain;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Linq;
 
 namespace FirstRepository.Repository
 {
     public class OrganizationStorage
     {
-        private Dictionary<int, OrganizationDomain> Organizations { get; } = new Dictionary<int, OrganizationDomain>();
+        private readonly Dictionary<int, OrganizationDomain> _organizations = new();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
-        public void Create(OrganizationDomain organization)
+        public OrganizationDomain Create(OrganizationDomain organization)
         {
-            Organizations.Add(organization.organizationId, organization);
+            var organizationId = _organizations.Keys.Max() + 1;
+            organization.organizationId = organizationId;
+            _organizations.Add(organization.organizationId, organization);
+            return organization;
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
             //command.ExecuteNonQuery
@@ -22,18 +25,18 @@ namespace FirstRepository.Repository
 
         public OrganizationDomain Read(int organizationId)
         {
-            return Organizations[organizationId];
+            return _organizations[organizationId];
         }
 
         public OrganizationDomain Update(int organizationId, OrganizationDomain newOrgz)
         {
-            Organizations[organizationId] = newOrgz;
-            return Organizations[organizationId];
+            _organizations[organizationId] = newOrgz;
+            return _organizations[organizationId];
         }
 
         public bool Delete(int organizationId)
         {
-            return Organizations.Remove(organizationId);
+            return _organizations.Remove(organizationId);
         }
     }
 }

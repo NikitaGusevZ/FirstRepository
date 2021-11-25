@@ -1,18 +1,21 @@
 ﻿using FirstRepository.Domain;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Linq;
 
 namespace FirstRepository.Repository
 {
     public class SoftwareStorage
     {
-        private Dictionary<int, SoftwareDomain> Softwares { get; } = new Dictionary<int, SoftwareDomain>();
+        private readonly Dictionary<int, SoftwareDomain> _softwares = new();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
-        public void Create(SoftwareDomain software)
+        public SoftwareDomain Create(SoftwareDomain software)
         {
-            Softwares.Add(software.softwareId, software);
+            var softwareId = _softwares.Keys.Max() + 1;
+            software.softwareId = softwareId;
+            _softwares.Add(software.softwareId, software);
+            return software;
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
             //command.ExecuteNonQuery
@@ -22,18 +25,18 @@ namespace FirstRepository.Repository
 
         public SoftwareDomain Read(int softwareId)
         {
-            return Softwares[softwareId];
+            return _softwares[softwareId];
         }
 
         public SoftwareDomain Update(int softwareId, SoftwareDomain newSoftware)
         {
-            Softwares[softwareId] = newSoftware;
-            return Softwares[softwareId];
+            _softwares[softwareId] = newSoftware;
+            return _softwares[softwareId];
         }
 
         public bool Delete(int softwareId)
         {
-            return Softwares.Remove(softwareId);
+            return _softwares.Remove(softwareId);
         }
     }
 }

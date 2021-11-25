@@ -1,18 +1,21 @@
 ﻿using FirstRepository.Domain;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Linq;
 
 namespace FirstRepository.Repository
 {
     public class PaymentReportStorage
     {
-        private Dictionary<int, PaymentReport> PayReports { get; } = new Dictionary<int, PaymentReport>();
+        private readonly Dictionary<int, PaymentReport> _payReports  = new();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
-        public void Create(PaymentReport payreport)
+        public PaymentReport Create(PaymentReport payreport)
         {
-            PayReports.Add(payreport.payreportId, payreport);
+            var payreportId = _payReports.Keys.Max() + 1;
+            payreport.payreportId = payreportId;
+            _payReports.Add(payreport.payreportId, payreport);
+            return payreport;
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
             //command.ExecuteNonQuery
@@ -22,18 +25,18 @@ namespace FirstRepository.Repository
 
         public PaymentReport Read(int payreportId)
         {
-            return PayReports[payreportId];
+            return _payReports[payreportId];
         }
 
         public PaymentReport Update(int payreportId, PaymentReport newPayreport)
         {
-            PayReports[payreportId] = newPayreport;
-            return PayReports[payreportId];
+            _payReports[payreportId] = newPayreport;
+            return _payReports[payreportId];
         }
 
         public bool Delete(int payreportId)
         {
-            return PayReports.Remove(payreportId);
+            return _payReports.Remove(payreportId);
         }
     }
 }

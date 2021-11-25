@@ -1,18 +1,21 @@
 ﻿using FirstRepository.Domain;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Linq;
 
 namespace FirstRepository.Repository
 {
     public class SoftwareTypeStorage
     {
-        private Dictionary<int, SoftwareTypeDomain> SoftTypes { get; } = new Dictionary<int, SoftwareTypeDomain>();
+        private readonly Dictionary<int, SoftwareTypeDomain> _softTypes = new();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
-        public void Create(SoftwareTypeDomain softtype)
+        public SoftwareTypeDomain Create(SoftwareTypeDomain softtype)
         {
-            SoftTypes.Add(softtype.softtypeId, softtype);
+            var softtypeId = _softTypes.Keys.Max() + 1;
+            softtype.softtypeId = softtypeId;
+            _softTypes.Add(softtype.softtypeId, softtype);
+            return softtype;
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
             //command.ExecuteNonQuery
@@ -22,18 +25,18 @@ namespace FirstRepository.Repository
 
         public SoftwareTypeDomain Read(int softtypeId)
         {
-            return SoftTypes[softtypeId];
+            return _softTypes[softtypeId];
         }
 
         public SoftwareTypeDomain Update(int softtypeId, SoftwareTypeDomain newSoftType)
         {
-            SoftTypes[softtypeId] = newSoftType;
-            return SoftTypes[softtypeId];
+            _softTypes[softtypeId] = newSoftType;
+            return _softTypes[softtypeId];
         }
 
         public bool Delete(int softtypeId)
         {
-            return SoftTypes.Remove(softtypeId);
+            return _softTypes.Remove(softtypeId);
         }
     }
 }
