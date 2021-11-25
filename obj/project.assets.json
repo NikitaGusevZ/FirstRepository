@@ -193,19 +193,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Asus\\.nuget\\packages\\": {}
+    "C:\\Users\\Nikita Gusev\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\rsreu\\03_practice\\0315\\Gusev\\FirstRepository.csproj",
+      "projectUniqueName": "C:\\Users\\Nikita Gusev\\Documents\\GitHub\\FirstRepository\\FirstRepository.csproj",
       "projectName": "FirstRepository",
-      "projectPath": "D:\\rsreu\\03_practice\\0315\\Gusev\\FirstRepository.csproj",
-      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "D:\\rsreu\\03_practice\\0315\\Gusev\\obj\\",
+      "projectPath": "C:\\Users\\Nikita Gusev\\Documents\\GitHub\\FirstRepository\\FirstRepository.csproj",
+      "packagesPath": "C:\\Users\\Nikita Gusev\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nikita Gusev\\Documents\\GitHub\\FirstRepository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nikita Gusev\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -254,7 +254,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
