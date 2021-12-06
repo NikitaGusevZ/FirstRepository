@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-
+using FirstRepository.Domain;
+using FirstRepository.Repository;
 
 namespace FirstRepository.Controllers
 {
@@ -32,9 +33,10 @@ namespace FirstRepository.Controllers
         }
 
         [HttpPut("Create")]
-        public string Create(string str)
+        public Developer Create(Developer developer)
         {
-            return str;
+            Storage.DeveloperStorage.Create(developer);
+            return Storage.DeveloperStorage.Read(developer.Id);
         }
 
         [HttpGet("Read")]

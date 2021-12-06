@@ -4,18 +4,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using FirstRepository.Domain;
+using FirstRepository.Repository;
 
 namespace FirstRepository.Controllers
 {
     [ApiController]
-    [Route("/Software")]
-    public class SoftwareController : ControllerBase
+    [Route("/softwaretype")]
+    public class SoftwareTypeController : ControllerBase
     {
 
         [HttpPut("Create")]
-        public string Create(string str)
+        public SoftwareType Create(SoftwareType softwareType)
         {
-            return str;
+            Storage.SoftwareTypeStorage.Create(softwareType);
+            return Storage.SoftwareTypeStorage.Read(softwareType.Id);
         }
 
         [HttpGet("Read")]

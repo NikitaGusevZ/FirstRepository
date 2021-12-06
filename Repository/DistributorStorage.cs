@@ -6,15 +6,15 @@ namespace FirstRepository.Repository
 {
     public class DistributorStorage
     {
-        private readonly Dictionary<int, DistributorDomain> _distributors  = new();
+        private readonly Dictionary<int, Distributor> _distributors  = new();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
-        public DistributorDomain Create(DistributorDomain distributor)
+        public Distributor Create(Distributor distributor)
         {
             var distributorId = _distributors.Keys.Max() + 1;
-            distributor.distributorId = distributorId;
-            _distributors.Add(distributor.distributorId, distributor);
+            distributor.Id = distributorId;
+            _distributors.Add(distributor.Id, distributor);
             return distributor;
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
@@ -23,12 +23,12 @@ namespace FirstRepository.Repository
             //command.ExecuteScalar
         }
 
-        public DistributorDomain Read(int distributorId)
+        public Distributor Read(int distributorId)
         {
             return _distributors[distributorId];
         }
 
-        public DistributorDomain Update(int distributorId, DistributorDomain newDistributor)
+        public Distributor Update(int distributorId, Distributor newDistributor)
         {
             _distributors[distributorId] = newDistributor;
             return _distributors[distributorId];

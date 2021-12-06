@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace FirstRepository.Domain
 {
-    public class OrganizationDomain
+    public class Organization
     {
-        public int organizationId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Country { get; set; }
         public string Phone { get; set; }

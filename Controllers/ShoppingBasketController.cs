@@ -4,18 +4,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using FirstRepository.Domain;
+using FirstRepository.Repository;
 
 namespace FirstRepository.Controllers
 {
     [ApiController]
-    [Route("/softwaretype")]
-    public class SoftwareTypeController : ControllerBase
+    [Route("/shoppingBasket")]
+    public class ShoppingBasketController : ControllerBase
     {
 
         [HttpPut("Create")]
-        public string Create(string str)
+        public ShoppingBasket Create(ShoppingBasket shoppingBasket)
         {
-            return str;
+            Storage.ShoppingBasketStorage.Create(shoppingBasket);
+            return Storage.ShoppingBasketStorage.Read(shoppingBasket.Id);
         }
 
         [HttpGet("Read")]

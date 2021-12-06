@@ -4,18 +4,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using FirstRepository.Domain;
+using FirstRepository.Repository;
 
 namespace FirstRepository.Controllers
 {
     [ApiController]
-    [Route("/organization")]
-    public class OrganizationController : ControllerBase
+    [Route("/payment")]
+    public class PaymentController : ControllerBase
     {
 
         [HttpPut("Create")]
-        public string Create(string str)
+        public Payment Create(Payment payment)
         {
-            return str;
+            Storage.PaymentStorage.Create(payment);
+            return Storage.PaymentStorage.Read(payment.Id);
         }
 
         [HttpGet("Read")]

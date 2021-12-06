@@ -7,7 +7,7 @@ namespace FirstRepository.Domain
 {
     public class PaymentReport
     {
-        public int payreportId { get; set; }
+        public int Id { get; set; }
         public int PaymentId { get; set; }
         public DateTime Date { get; set; }
     }

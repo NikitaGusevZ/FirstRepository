@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using FirstRepository.Domain;
+using FirstRepository.Repository;
 
 namespace FirstRepository.Controllers
 {
@@ -39,9 +41,10 @@ namespace FirstRepository.Controllers
         }
 
         [HttpPut("Create")]
-        public string Create(string str)
+        public Distributor Create(Distributor distributor)
         {
-            return str;
+            Storage.DistributorStorage.Create(distributor);
+            return Storage.DistributorStorage.Read(distributor.Id);
         }
 
         [HttpGet("Read")]

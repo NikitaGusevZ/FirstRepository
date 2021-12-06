@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace FirstRepository.Repository
 {
-    public class ConnectionPaymentSoftwareStorage
+    public class ShoppingBasketStorage
     {
-        private readonly Dictionary<int, ConnectionPaymentSoftware> _connections = new();
+        private readonly Dictionary<int, ShoppingBasket> _connections = new();
 
-        public ConnectionPaymentSoftware Create(ConnectionPaymentSoftware connection)
+        public ShoppingBasket Create(ShoppingBasket connection)
         {
             // var connectionId = _connections.Keys.Last() + 1;
             var connectionId = _connections.Keys.Max() + 1;
@@ -22,12 +22,12 @@ namespace FirstRepository.Repository
             //command.ExecuteScalar
         }
 
-        public ConnectionPaymentSoftware Read(int connectionId)
+        public ShoppingBasket Read(int connectionId)
         {
             return _connections[connectionId];
         }
 
-        public ConnectionPaymentSoftware Update(int connectionId, ConnectionPaymentSoftware newConnetion)
+        public ShoppingBasket Update(int connectionId, ShoppingBasket newConnetion)
         {
             _connections[connectionId] = newConnetion;
             return _connections[connectionId];

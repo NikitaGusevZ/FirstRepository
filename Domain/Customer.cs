@@ -14,16 +14,16 @@ namespace FirstRepository.Domain
 
         public string Email { get; set; }
 
-        public ConnectionPaymentSoftware BuySoftware(int softwareId, int quantity)
+        public ShoppingBasket BuySoftware(int softwareId, int quantity)
         {
             var soft = Storage.SoftwareStorage.Read(softwareId);
-            var connection = new ConnectionPaymentSoftware
+            var connection = new ShoppingBasket
             {
-                SoftwareId = soft.softwareId,
-                Price = soft.Price,
-                Quantity = quantity
+                SoftwareId = soft.Id,
+                AmountMoney = soft.Price,
+                quantity = quantity
             };
-            return Storage.ConnectionPaymentSoftwareStorage.Create(connection);
+            return Storage.ShoppingBasketStorage.Create(connection);
         }
     }
 }

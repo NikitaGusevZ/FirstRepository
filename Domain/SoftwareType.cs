@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace FirstRepository.Domain
 {
-    public class SoftwareTypeDomain
+    public class SoftwareType
     {
-        public int softtypeId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
     }
 }

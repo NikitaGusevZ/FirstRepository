@@ -6,15 +6,15 @@ namespace FirstRepository.Repository
 {
     public class OrganizationStorage
     {
-        private readonly Dictionary<int, OrganizationDomain> _organizations = new();
+        private readonly Dictionary<int, Organization> _organizations = new();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
-        public OrganizationDomain Create(OrganizationDomain organization)
+        public Organization Create(Organization organization)
         {
             var organizationId = _organizations.Keys.Max() + 1;
-            organization.organizationId = organizationId;
-            _organizations.Add(organization.organizationId, organization);
+            organization.Id = organizationId;
+            _organizations.Add(organization.Id, organization);
             return organization;
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
@@ -23,12 +23,12 @@ namespace FirstRepository.Repository
             //command.ExecuteScalar
         }
 
-        public OrganizationDomain Read(int organizationId)
+        public Organization Read(int organizationId)
         {
             return _organizations[organizationId];
         }
 
-        public OrganizationDomain Update(int organizationId, OrganizationDomain newOrgz)
+        public Organization Update(int organizationId, Organization newOrgz)
         {
             _organizations[organizationId] = newOrgz;
             return _organizations[organizationId];

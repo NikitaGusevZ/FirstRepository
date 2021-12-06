@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace FirstRepository.Domain
 {
-    public class PaymentDomain
+    public class Payment
     {
-        public int paymentId { get; set; }
+        public int Id { get; set; }
         public int CusotmerId { get; set; }
         public int DistributorId { get; set; }
         public DateTime PurchaseDate { get; set; }

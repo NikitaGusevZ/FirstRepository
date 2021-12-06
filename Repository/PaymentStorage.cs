@@ -6,15 +6,15 @@ namespace FirstRepository.Repository
 {
     public class PaymentStorage
     {
-        private readonly Dictionary<int, PaymentDomain> _payments = new();
+        private readonly Dictionary<int, Payment> _payments = new();
         //private SqlConnection Connection { get; } = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;");
         //public CustomerStorage() => Connection.Open();
 
-        public PaymentDomain Create(PaymentDomain payment)
+        public Payment Create(Payment payment)
         {
             var paymentId = _payments.Keys.Max() + 1;
-            payment.paymentId = paymentId;
-            _payments.Add(payment.paymentId, payment);
+            payment.Id = paymentId;
+            _payments.Add(payment.Id, payment);
             return payment;
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
@@ -23,12 +23,12 @@ namespace FirstRepository.Repository
             //command.ExecuteScalar
         }
 
-        public PaymentDomain Read(int paymentId)
+        public Payment Read(int paymentId)
         {
             return _payments[paymentId];
         }
 
-        public PaymentDomain Update(int paymentId, PaymentDomain newPayment)
+        public Payment Update(int paymentId, Payment newPayment)
         {
             _payments[paymentId] = newPayment;
             return _payments[paymentId];

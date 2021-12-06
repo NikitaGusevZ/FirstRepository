@@ -2,7 +2,7 @@
 {
     public class Storage
     {
-        public static readonly ConnectionPaymentSoftwareStorage ConnectionPaymentSoftwareStorage = new();
+        public static readonly ShoppingBasketStorage ShoppingBasketStorage = new();
         public static readonly CustomerStorage CustomerStorage = new();
         public static readonly DeveloperStorage DeveloperStorage = new();
         public static readonly DistributorStorage DistributorStorage = new();

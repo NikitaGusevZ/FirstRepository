@@ -13,8 +13,8 @@ namespace FirstRepository.Repository
         public PaymentReport Create(PaymentReport payreport)
         {
             var payreportId = _payReports.Keys.Max() + 1;
-            payreport.payreportId = payreportId;
-            _payReports.Add(payreport.payreportId, payreport);
+            payreport.Id = payreportId;
+            _payReports.Add(payreport.Id, payreport);
             return payreport;
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";
