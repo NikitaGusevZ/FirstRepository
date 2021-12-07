@@ -22,21 +22,21 @@ namespace FirstRepository.Controllers
         }
 
         [HttpGet("Read")]
-        public string Read(string str)
+        public ShoppingBasket Read(int Id)
         {
-            return str;
+            return Storage.ShoppingBasketStorage.Read(Id);
         }
 
         [HttpPatch("Update")]
-        public string Update(string str)
+        public ShoppingBasket Update(int Id, ShoppingBasket newShoppingBasket)
         {
-            return str;
+            return Storage.ShoppingBasketStorage.Update(Id,newShoppingBasket);
         }
 
         [HttpDelete("Delete")]
-        public string Delete(string str)
+        public bool Delete(int Id)
         {
-            return str;
+            return Storage.ShoppingBasketStorage.Delete(Id);
         }
     }
 }

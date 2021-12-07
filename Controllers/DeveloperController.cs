@@ -40,21 +40,21 @@ namespace FirstRepository.Controllers
         }
 
         [HttpGet("Read")]
-        public string Read(string str)
+        public Developer Read(int Id)
         {
-            return str;
+            return Storage.DeveloperStorage.Read(Id);
         }
 
         [HttpPatch("Update")]
-        public string Update(string str)
+        public Developer Update(int Id, Developer newDeveloper)
         {
-            return str;
+            return Storage.DeveloperStorage.Update(Id,newDeveloper);
         }
 
         [HttpDelete("Delete")]
-        public string Delete(string str)
+        public bool Delete(int Id)
         {
-            return str;
+            return Storage.DeveloperStorage.Delete(Id);
         }
     }
 }

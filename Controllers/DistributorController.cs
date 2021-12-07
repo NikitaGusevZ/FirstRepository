@@ -48,21 +48,21 @@ namespace FirstRepository.Controllers
         }
 
         [HttpGet("Read")]
-        public string Read(string str)
+        public Distributor Read(int Id)
         {
-            return str;
+            return Storage.DistributorStorage.Read(Id);
         }
 
         [HttpPatch("Update")]
-        public string Update(string str)
+        public Distributor Update(int Id, Distributor newDistributor)
         {
-            return str;
+            return Storage.DistributorStorage.Update(Id,newDistributor);
         }
 
         [HttpDelete("Delete")]
-        public string Delete(string str)
+        public bool Delete(int Id)
         {
-            return str;
+            return Storage.DistributorStorage.Delete(Id);
         }
     }
 

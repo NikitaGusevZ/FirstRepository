@@ -22,21 +22,21 @@ namespace FirstRepository.Controllers
         }
 
         [HttpGet("Read")]
-        public string Read(string str)
+        public SoftwareType Read(int Id)
         {
-            return str;
+            return Storage.SoftwareTypeStorage.Read(Id);
         }
 
         [HttpPatch("Update")]
-        public string Update(string str)
+        public SoftwareType Update(int Id, SoftwareType newSoftwareType)
         {
-            return str;
+            return Storage.SoftwareTypeStorage.Update(Id, newSoftwareType);
         }
 
         [HttpDelete("Delete")]
-        public string Delete(string str)
+        public bool Delete(int Id)
         {
-            return str;
+            return Storage.SoftwareTypeStorage.Delete(Id);
         }
     }
 }
