@@ -83,6 +83,9 @@ Steam считается самой крупной платформой цифр
 ***
 ## Cписок используемых источников <a name="список_литературы"></a>
 [1] - https://definitions.uslegal.com/d/digital-distribution/ (дата обращения: 08.12.2021).
+
 [2] - http://www.gamespot.com/articles/steam-reaches-new-concurrent-user-record/1100-6431895/ (дата обращения: 08.12.2021).
+
 [3] - https://en.wikipedia.org/wiki/Origin_(digital_distribution_software) (дата обращения: 08.12.2021).
+
 [4] - https://flexberry.github.io/ru/fd_use-case-diagram.html (дата обращения: 08.12.2021).
