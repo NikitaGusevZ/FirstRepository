@@ -37,7 +37,7 @@
 Сервис онлайн-дистрибуции программного обеспечения курируют их владельцы, что требует, чтобы представленные перспективные приложения проходили процесс утверждения. Эти приложения проверяются на соответствие определенным правилам (например, по контролю качества и цензуре), включая требование о взимании комиссии за каждую продажу платного приложения. Некоторые сервисы онлайн-дистрибуции предоставляют разработчикам обратную связь: количество установок, проблемы на местах (задержка, сбой и т.д.). 
 
 ***
-  ### 1.1 Указание на проблематику <a name ="указание_на_проблематику"></a>
+  ### 1.1 Указание на проблематику <a name ="проблематика"></a>
   Подавляющее количество людей покупает программное обеспечение через интернет, так как это быстрее и удобнее по сравнению с покупкой физического носителя информации и затем установки программного обеспечения через него. Также приемуществом является то, что покупатель может сразу установить купленное ПО на свое устройство, а также оставить отзыв, который смогут увидеть другие покупатели. Разработчики в свою очередь ищут такое место, где можно разместить свой продукт так, чтобы его могло увидеть как можно большее количество людей,получить за него максимальню прибыль и иметь обратную связь с системой для получения отчетов о результатах продаж. При создании данной информационной системы нужно учесть все это для удобства работы с ней как покупателю, так и разработчику.
 ***
   ### 1.2 Формулировка задачи <a name ="формулировка_задачи"></a>
@@ -62,18 +62,190 @@ Steam считается самой крупной платформой цифр
 ## 3 Разработка системы <a name ="разработка_системы"></a>
 ***
 ### 3.1 Проектирование системы <a name="проектирование"></a>
-Разработка информационной системы начинается с построения USE-CASE диаграммы (Диаграмма вариантов использования) , которая состоит из участников и прецендетов.
+Разработка информационной системы начинается с построения USE-CASE диаграммы (Диаграмма вариантов использования) , которая состоит из участников и прецендетов.(см. рисунок 1)
 
 Участник - это множество логически связанных ролей, исполняемых при взаимодействии с прецедентами или сущностями (система, подсистема или класс). Участником может быть человек или другая система, подсистема или класс, которые представляют нечто вне сущности. Графически участник изображается “человечком”.
 
 Прецедент - описание множества последовательных событий (включая варианты), выполняемых системой, которые приводят к наблюдаемому участником результату. Прецедент представляет поведение сущности, описывая взаимодействие между участниками и системой. Прецедент не показывает, “как” достигается некоторый результат, а только “что” именно выполняется. Прецеденты обозначаются очень простым образом - в виде эллипса, внутри которого указано его название.[5]
-![USE_CASE](https://user-images.githubusercontent.com/89989588/145208125-c811c839-9164-406b-8a92-f48644c53129.png)
-На основе USE-CASE диаграммы разрабатвается DFD диаграмма, которая наглядно отображает течение информации в пределах системы.
-![DFD](https://user-images.githubusercontent.com/89989588/145209174-1f8eb17a-a37d-4f89-a0a1-053f9ce9d495.png)
-На основе DFD диаграммы проектируется схема «сущность-связь» (ER-диаграмма), где показано, как разные «сущности» (люди, объекты, концепции и так далее) связаны между собой внутри системы.
-![ER](https://user-images.githubusercontent.com/89989588/145209359-81ad4f8e-eba6-463e-8e2a-a82dd78fcdf4.png)
+<p align="center">
+<img src = "https://user-images.githubusercontent.com/89989588/145208125-c811c839-9164-406b-8a92-f48644c53129.png"></p>
+  <p align="center">Рисунок 1 - Диаграмма вариантов использования</p>  
+На основе USE-CASE диаграммы разрабатвается DFD диаграмма, которая наглядно отображает течение информации в пределах системы.(см. рисунок 2)
+<p align="center">
+<img src = "https://user-images.githubusercontent.com/89989588/145209174-1f8eb17a-a37d-4f89-a0a1-053f9ce9d495.png"></p>
+  <p align="center">Рисунок 2 - Диаграмма потоков данных</p>  
+На основе DFD диаграммы проектируется схема «сущность-связь» (ER-диаграмма), где показано, как разные «сущности» (люди, объекты, концепции и так далее) связаны между собой внутри системы.(см. рисунок 3)
+<p align="center">
+<img src = "https://user-images.githubusercontent.com/89989588/145209359-81ad4f8e-eba6-463e-8e2a-a82dd78fcdf4.png"></p>
+<p align="center">Рисунок 3 - Диаграмма «сущность-связь»</p> 
+
 ***
 ### 3.2 Реализация системы <a name="реализация"></a>
+На основании ER-диаграммы создали классы. Примеры классов "Клиент" и "Программное обеспечение" представленны на листингах 1 и 2 соответственно.
+Листинг 1 - Класс "Клиент"
+```csharp
+     public class Customer
+    {
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string SecondName { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+
+    }
+```
+Листинг 2 - Класс "Программное обеспечение"
+```csharp
+        public class Software
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public int SoftwareTypeId { get; set; }
+        public int Rating{ get; set; }
+        public int DeveloperId { get; set; }
+    }
+```
+Затем отпределили где они будут храниться, создав репозитории ......
+
+Листинг 3 - Репрезиторий для класса "Клиент"
+```csharp
+        public class CustomerStorage
+    {
+        private readonly Dictionary<int, Customer > _customers  = new ();
+ 
+        public void Create(Customer customer)
+        {
+            _customers.Add(customer.Id, customer);
+        }
+
+        public Customer Read(int customerId)
+        {
+            return _customers[customerId];
+        }
+
+        public Customer Update(int customerId, Customer newCustomer)
+        {
+            _customers[customerId] = newCustomer;
+            return _customers[customerId];
+        }
+
+        public bool Delete(int customerId)
+        {
+            return _customers.Remove(customerId);
+        }
+    }
+```
+Листинг 4 - Общеее хранилище
+```csharp
+        public class Storage
+    {
+        public static readonly ShoppingBasketStorage ShoppingBasketStorage = new();
+        public static readonly CustomerStorage CustomerStorage = new();
+        public static readonly DeveloperStorage DeveloperStorage = new();
+        public static readonly DistributorStorage DistributorStorage = new();
+        public static readonly OrganizationStorage OrganizationStorage = new();
+        public static readonly PaymentReportStorage PaymentReportStorage = new();
+        public static readonly PaymentStorage PaymentStorage = new();
+        public static readonly SoftwareStorage SoftwareStorage = new();
+        public static readonly SoftwareTypeStorage SoftwareTypeStorage = new();
+    }
+```
+Разработали набор web-методов, включая 4 базисные операции CRUD, для каждой сущности, отражающих предметную область. Примеры контроллеров для классов "Клиент" и "Платеж" представлены на листингах 5 и 6.
+
+Листинг 5 - Контроллер для класса "Клиент"
+```csharp
+    [ApiController]
+    [Route("/customer")]
+    public class CustomerController : ControllerBase
+    {
+
+        [HttpGet("SearchPO")]
+        public string SearchPO(string str)
+        {
+            return str;
+        }
+
+        [HttpGet("BuyPO")]
+        public string BuyPO(string str)
+        {
+            return str;
+        }
+
+
+        [HttpGet("DownloadPO")]
+        public string DownloadPO(string str)
+        {
+            return str;
+        }
+
+
+        [HttpGet("GradePO")]
+        public string GradePO(string str)
+        {
+            return str;
+        }
+
+        [HttpPut]
+        public Customer Create(Customer customer)
+        {
+            Storage.CustomerStorage.Create(customer);
+            return Storage.CustomerStorage.Read(customer.Id);
+        }
+
+        [HttpGet]
+        public Customer Read(int Id)
+        {
+            return Storage.CustomerStorage.Read(Id);
+        }
+
+        [HttpPatch]
+        public Customer Update(int Id, Customer newCustomer)
+        {
+            return Storage.CustomerStorage.Update(Id,newCustomer);
+        }
+
+        [HttpDelete]
+        public bool Delete(int Id)
+        {
+            return Storage.CustomerStorage.Delete(Id);
+        }
+    }
+```
+Листинг 6 - Контроллер для класса "Платеж"
+```csharp
+    [ApiController]
+    [Route("/payment")]
+    public class PaymentController : ControllerBase
+    {
+
+        [HttpPut("Create")]
+        public Payment Create(Payment payment)
+        {
+            Storage.PaymentStorage.Create(payment);
+            return Storage.PaymentStorage.Read(payment.Id);
+        }
+
+        [HttpGet("Read")]
+        public Payment Read(int Id)
+        {
+            return Storage.PaymentStorage.Read(Id);
+        }
+
+        [HttpPatch("Update")]
+        public Payment Update(int Id, Payment newPayment )
+        {
+            return Storage.PaymentStorage.Update(Id,newPayment);
+        }
+
+        [HttpDelete("Delete")]
+        public bool Delete(int Id)
+        {
+            return Storage.PaymentStorage.Delete(Id);
+        }
+    }
+```
+
 ***
 ## 4 Тестирование <a name="тестирование"></a>
 ***
