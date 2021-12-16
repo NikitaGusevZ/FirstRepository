@@ -255,10 +255,10 @@ Steam считается самой крупной платформой цифр
 **ПО ГОСТ СДЕЛАТЬ, УБРАТЬ ВИКИПЕДИЮ**
 [1] - https://definitions.uslegal.com/d/digital-distribution/ (дата обращения: 08.12.2021).
 
-[2] - https://en.wikipedia.org/wiki/Steam_(service) (дата обращения: 08.12.2021).
+[2] - https://store.steampowered.com/about/ (дата обращения: 08.12.2021).
 
 [3] - http://www.gamespot.com/articles/steam-reaches-new-concurrent-user-record/1100-6431895/ (дата обращения: 08.12.2021).
 
-[4] - https://en.wikipedia.org/wiki/Origin_(digital_distribution_software) (дата обращения: 08.12.2021).
+[4] - https://www.origin.com/rus/ru-ru/store/about (дата обращения: 08.12.2021).
 
-[5] - https://flexberry.github.io/ru/fd_use-case-diagram.html (дата обращения: 08.12.2021).
+[5] - https://www.lucidchart.com/pages/uml-use-case-diagram (дата обращения: 08.12.2021).
