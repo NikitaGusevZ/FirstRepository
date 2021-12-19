@@ -248,6 +248,91 @@ Steam считается самой крупной платформой цифр
 
 ***
 ## 4 Тестирование <a name="тестирование"></a>
+После запуска программы открывается страница Swagger UI со списком сущностей и операций над ними (см. рисунок 4).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686323-3633f33a-9d9f-4cc9-a90e-2b858b812250.png"</p>
+<p align="center">Рисунок 4 - Cтраница Swagger UI</p> 
+
+Проверка работы методов CRUD (Create - создание, Read - чтение, Update - обновление, Delete - удаление) в сущности Author (см. рисунок 5).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686653-943b4f7a-b913-4c69-a06e-53fc6657fbf0.png"</p>
+<p align="center">Рисунок 5 -Проверка работы методов CRUD</p> 
+
+1) Create позволяет добавлять новые строки в вашу таблицу (см. рисунок 6).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686666-4100b18f-ad04-42bd-ae66-fa952bf6f4b3.png"</p>
+<p align="center">Рисунок 6 - Окно метода создания</p> 
+
+Ввод необходимых данных об авторе в соответствующие поля (см. рисунок 7).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686677-8b9ad630-ea51-4299-9e22-52e1d79c1379.png"</p>
+  <p align="center">Рисунок 7 - Работа с методом создания</p> 
+  
+После успешного выполнения операции сервер выдаёт ответ (см. рисунок 8).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686685-cd43eb5f-342b-46b3-b6cd-703ae804d374.png"</p>
+  <p align="center">Рисунок 8 - Результат выполнения операции создания</p> 
+  
+2) Функция чтения Read похожа на функцию поиска, поскольку позволяет извлекать определенные записи и считывать их значения (см. рисунок 9).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686722-23c24399-92a0-4968-97d2-a30cb7a1760a.png"</p>
+  <p align="center">Рисунок 9 - Окно функции чтения</p> 
+  
+Считывание информации об уже созданном авторе по его Id (см. рисунок 10).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686733-033441b0-244d-4b7c-9d0e-210d8254d405.png"</p>
+  <p align="center">Рисунок 10 - Работа с методом чтения</p> 
+  
+После выполнения операции сервер выдаёт об авторе информацию, которая была создана в Create (см. рисунок 11).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686734-e26751e6-54a2-4386-b7e9-4bd07f8158a8.png"</p>
+  <p align="center">Рисунок 11 - Результат выполнения операции чтения</p> 
+  
+3) Update, редактирование записи (см. рисунок 12). Используется для изменения существующих записей в базе данных.
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686764-1a03eeb7-e80e-4373-89c5-b330bb74135d.png"</p>
+  <p align="center">Рисунок 12 - Окно метода обновления</p> 
+  
+Изменение информации об авторе, для этого сначала нужно ввести его номер и затем новые данные (см. рисунок 13).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686772-e39ac9c5-4b4c-44b9-b017-99d44cbc586c.png"</p>
+  <p align="center">Рисунок 13 - Работа с методом обновления</p> 
+  
+После выполнения операции сервер выдаёт новую информацию о том же авторе (см. рисунок 14).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686783-ff1b6374-1c00-4b28-b5c9-09f83c1c8b63.png"</p>
+  <p align="center">Рисунок 14 - Результат выполнения операции обновления</p> 
+  
+Функцией read проверка вышеуказанной операции. После срабатывания сервер выдает новую информацию об авторе (см. рисунок 15).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686987-558709dd-3d33-4a59-9516-ff0a4b9e9e70.png"</p>
+  <p align="center">Рисунок 15 - Результат выполнения операции чтения после обновления данных</p> 
+  
+4) Delete - используется для удаления записи по Id. Если операция удаления сработает успешно, то ответ сервера будет "true", иначе "false" (см. рисунок 16).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146686993-59f50266-f8dc-409e-8662-9cc5ef15dced.png"</p>
+  <p align="center">Рисунок 16 - Окно метода удаления</p> 
+  
+Удаление автора по его Id (см. рисунок 17).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146687000-4bfff603-7954-4653-ae79-a5e46187487f.png"</p>
+  <p align="center">Рисунок 17 - Работа с методом удаления</p> 
+  
+После выполнения операции ответ сервера (см. рисунок 18).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146687008-6dfe6982-dfe6-4937-81d9-dc10392ecae3.png"</p>
+  <p align="center">Рисунок 18 - Раезультат выполнения метода удаления</p> 
+  
+Проверка вышеописанного действия с помощью read, считывание информацию об удалённом авторе (см. рисунок 19).
+<p align="center">
+  <img src = "https://user-images.githubusercontent.com/89989588/146687029-c41f8514-9cca-490d-8b1e-aa21f014736f.png"</p>
+  <p align="center">Рисунок 19 - Работа с операцией чтения</p> 
+  
+После срабатывания программа не выдаёт информации об этом авторе (см. рисунок 20).
+<p align="center">
+  <img src = ""</p>
+  <p align="center">Рисунок 20 - Результат выполнения операции чтения после удаления данных</p>
+  
 ***
 ## Заключение
 ***
