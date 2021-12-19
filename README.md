@@ -338,14 +338,14 @@ Steam считается самой крупной платформой цифр
 ***
 ## Cписок используемых источников <a name="список_литературы"></a>
 
-[1] - https://definitions.uslegal.com/d/digital-distribution/ (дата обращения: 08.12.2021).
+[1] - ComputerHope: Digital distribution [Электронный ресурс] Режим доступа:https://www.computerhope.com/jargon/d/digital-distribution.htm, свободный (дата обращения: 08.12.2021).
 
-[2] -  Что такое CDN и как это работает?. https://habr.com/ru/company/selectel/blog/463915/ selectel.ru (19 августа 2019). (дата обращения: 15.12.2021).
+[2] -  Что такое CDN и как это работает?[Электронный ресурс] Режим доступа:https://habr.com/ru/company/selectel/blog/463915/, свободный (дата обращения: 15.12.2021).
 
-[3] - https://store.steampowered.com/about/ (дата обращения: 08.12.2021).
+[3] - Steam: About [Электронный ресурс] Режим доступа:https://store.steampowered.com/about/, свободный (дата обращения: 08.12.2021).
 
-[4] - http://www.gamespot.com/articles/steam-reaches-new-concurrent-user-record/1100-6431895/ (дата обращения: 08.12.2021).
+[4] - Steam Reaches New Concurrent User Record [Электронный ресурс] Режим доступа:http://www.gamespot.com/articles/steam-reaches-new-concurrent-user-record/1100-6431895/, свободный (дата обращения: 08.12.2021).
 
-[5] - https://www.origin.com/rus/ru-ru/store/about (дата обращения: 08.12.2021).
+[5] - Origin: About [Электронный ресурс] Режим доступа:https://www.origin.com/rus/ru-ru/store/about, свободный (дата обращения: 08.12.2021).
 
-[6] - https://www.lucidchart.com/pages/uml-use-case-diagram (дата обращения: 08.12.2021).
+[6] - UML Use Case Diagram Tutorial [Электронный ресурс] Режим доступа:https://www.lucidchart.com/pages/uml-use-case-diagram, свободный (дата обращения: 08.12.2021).
